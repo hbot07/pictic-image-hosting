@@ -1,0 +1,22 @@
+{
+  "name": "pictic_api",
+  "version": "0.0.1",
+  "description": "The_website_is_pictic_a_web_based_platform_that_offers_image_hosting_and_sharing_services__Users_can_upload_their_own_images_and_view_a_feed_of_user_generated_image_posts__The_platform_is_designed_to_integrate_Machine_Learning__ML_algorithms_for_automatic_image_labeling_improving_the_searchability_and_discoverability_of_content_on_the_platform__Users_can_interact_with_posts_by_upvoting_and_commenting_on_them__The_website_features_a_simple_and_easy_to_use_interface_with_tools_such_as_tagging_liking_and_commenting_to_help_users_organize_and_share_their_content__The_website_also_offers_features_such_as_profile_customization_search_functionality_and_a_Chart_topping_page_displaying_posts_in_order_of_upvotes_",
+  "license": "Unlicense",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "mocha --recursive"
+  },
+  "browser": {
+    "fs": false
+  },
+  "dependencies": {
+    "superagent": "3.7.0",
+    "querystring": "0.2.0"
+  },
+  "devDependencies": {
+    "mocha": "~2.3.4",
+    "sinon": "1.17.3",
+    "expect.js": "~0.3.1"
+  }
+}
