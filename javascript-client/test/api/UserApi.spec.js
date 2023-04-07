@@ -103,9 +103,11 @@
           // TODO: uncomment, update parameter values for usersPost call and complete the assertions
           /*
           var opts = {};
-          opts.body = new PicticApi.UserCreate();
+          opts.body = new PicticApi.User();
+          opts.body.id = "0";
           opts.body.username = "";
           opts.body.email = "";
+          opts.body.createdAt = new Date();
           opts.body.password = "";
 
           instance.usersPost(opts, function(error, data, response) {
@@ -123,6 +125,8 @@
             expect(data.email).to.be("");
             expect(data.createdAt).to.be.a(Date);
             expect(data.createdAt).to.be(new Date());
+            expect(data.password).to.be.a('string');
+            expect(data.password).to.be("");
 
             done();
           });

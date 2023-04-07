@@ -64,6 +64,12 @@
         // expect(instance.createdAt).to.be(expectedValueLiteral);
       });
 
+      it('should have the property password (base name: "password")', function() {
+        // TODO: update the code to test the property password
+        expect(instance).to.have.property('password');
+        // expect(instance.password).to.be(expectedValueLiteral);
+      });
+
     });
   });
 

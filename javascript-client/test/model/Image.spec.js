@@ -76,6 +76,12 @@
         // expect(instance.comments).to.be(expectedValueLiteral);
       });
 
+      it('should have the property ceatedByUserId (base name: "ceated_by_user_id")', function() {
+        // TODO: update the code to test the property ceatedByUserId
+        expect(instance).to.have.property('ceatedByUserId');
+        // expect(instance.ceatedByUserId).to.be(expectedValueLiteral);
+      });
+
     });
   });
 

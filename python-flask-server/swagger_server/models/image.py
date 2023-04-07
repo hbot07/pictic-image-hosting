@@ -16,7 +16,7 @@ class Image(Model):
     Do not edit the class manually.
     """
 
-    def __init__(self, id: int=None, title: str=None, tags: str=None, url: str=None, upvotes: int=None, comments: List[Comment]=None):  # noqa: E501
+    def __init__(self, id: int=None, title: str=None, tags: str=None, url: str=None, upvotes: int=None, comments: List[Comment]=None, ceated_by_user_id: int=None):  # noqa: E501
         """Image - a model defined in Swagger
 
         :param id: The id of this Image.  # noqa: E501
@@ -31,6 +31,8 @@ class Image(Model):
         :type upvotes: int
         :param comments: The comments of this Image.  # noqa: E501
         :type comments: List[Comment]
+        :param ceated_by_user_id: The ceated_by_user_id of this Image.  # noqa: E501
+        :type ceated_by_user_id: int
         """
         self.swagger_types = {
             'id': int,
@@ -38,7 +40,8 @@ class Image(Model):
             'tags': str,
             'url': str,
             'upvotes': int,
-            'comments': List[Comment]
+            'comments': List[Comment],
+            'ceated_by_user_id': int
         }
 
         self.attribute_map = {
@@ -47,7 +50,8 @@ class Image(Model):
             'tags': 'tags',
             'url': 'url',
             'upvotes': 'upvotes',
-            'comments': 'comments'
+            'comments': 'comments',
+            'ceated_by_user_id': 'ceated_by_user_id'
         }
 
         self._id = id
@@ -56,6 +60,7 @@ class Image(Model):
         self._url = url
         self._upvotes = upvotes
         self._comments = comments
+        self._ceated_by_user_id = ceated_by_user_id
 
     @classmethod
     def from_dict(cls, dikt) -> 'Image':
@@ -209,3 +214,26 @@ class Image(Model):
         """
 
         self._comments = comments
+
+    @property
+    def ceated_by_user_id(self) -> int:
+        """Gets the ceated_by_user_id of this Image.
+
+        user who uploaded the image  # noqa: E501
+
+        :return: The ceated_by_user_id of this Image.
+        :rtype: int
+        """
+        return self._ceated_by_user_id
+
+    @ceated_by_user_id.setter
+    def ceated_by_user_id(self, ceated_by_user_id: int):
+        """Sets the ceated_by_user_id of this Image.
+
+        user who uploaded the image  # noqa: E501
+
+        :param ceated_by_user_id: The ceated_by_user_id of this Image.
+        :type ceated_by_user_id: int
+        """
+
+        self._ceated_by_user_id = ceated_by_user_id

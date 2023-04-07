@@ -98,8 +98,8 @@ class TestImageController(BaseTestCase):
         Upload a new image
         """
         data = dict(title='title_example',
-                    description='description_example',
-                    image=(BytesIO(b'some file data'), 'file.txt'))
+                    image=(BytesIO(b'some file data'), 'file.txt'),
+                    created_by_user_id=56)
         response = self.client.open(
             '/images',
             method='POST',

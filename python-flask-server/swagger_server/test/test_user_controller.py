@@ -7,7 +7,6 @@ from six import BytesIO
 
 from swagger_server.models.error import Error  # noqa: E501
 from swagger_server.models.user import User  # noqa: E501
-from swagger_server.models.user_create import UserCreate  # noqa: E501
 from swagger_server.models.user_login import UserLogin  # noqa: E501
 from swagger_server.models.user_token import UserToken  # noqa: E501
 from swagger_server.test import BaseTestCase
@@ -59,7 +58,7 @@ class TestUserController(BaseTestCase):
 
         Create a new user
         """
-        body = UserCreate()
+        body = User()
         response = self.client.open(
             '/users',
             method='POST',

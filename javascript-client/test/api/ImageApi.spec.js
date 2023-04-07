@@ -96,6 +96,8 @@
 
                       }
             }
+            expect(data.ceatedByUserId).to.be.a('number');
+            expect(data.ceatedByUserId).to.be(0);
 
             done();
           });
@@ -144,6 +146,8 @@
 
                       }
             }
+            expect(data.ceatedByUserId).to.be.a('number');
+            expect(data.ceatedByUserId).to.be(0);
 
             done();
           });
@@ -191,6 +195,8 @@
 
                       }
             }
+            expect(data.ceatedByUserId).to.be.a('number');
+            expect(data.ceatedByUserId).to.be(0);
 
             done();
           });
@@ -261,6 +267,8 @@
 
                       }
             }
+            expect(data.ceatedByUserId).to.be.a('number');
+            expect(data.ceatedByUserId).to.be(0);
 
             done();
           });
@@ -276,7 +284,7 @@
           var title = "title_example";
           var image = "/path/to/file.txt";
           var opts = {};
-          opts.description = "description_example";
+          opts.createdByUserId = 56;
 
           instance.imagesPost(title, image, opts, function(error, data, response) {
             if (error) {
@@ -311,6 +319,8 @@
 
                       }
             }
+            expect(data.ceatedByUserId).to.be.a('number');
+            expect(data.ceatedByUserId).to.be(0);
 
             done();
           });

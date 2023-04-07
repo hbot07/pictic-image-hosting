@@ -62,6 +62,8 @@
         obj.email = ApiClient.convertToType(data['email'], 'String');
       if (data.hasOwnProperty('created_at'))
         obj.createdAt = ApiClient.convertToType(data['created_at'], 'Date');
+      if (data.hasOwnProperty('password'))
+        obj.password = ApiClient.convertToType(data['password'], 'String');
     }
     return obj;
   }
@@ -85,6 +87,11 @@
    * @member {Date} createdAt
    */
   exports.prototype.createdAt = undefined;
+
+  /**
+   * @member {String} password
+   */
+  exports.prototype.password = undefined;
 
 
   return exports;

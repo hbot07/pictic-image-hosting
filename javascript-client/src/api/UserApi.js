@@ -16,18 +16,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/Error', 'model/User', 'model/UserCreate', 'model/UserLogin', 'model/UserToken'], factory);
+    define(['ApiClient', 'model/Error', 'model/User', 'model/UserLogin', 'model/UserToken'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/Error'), require('../model/User'), require('../model/UserCreate'), require('../model/UserLogin'), require('../model/UserToken'));
+    module.exports = factory(require('../ApiClient'), require('../model/Error'), require('../model/User'), require('../model/UserLogin'), require('../model/UserToken'));
   } else {
     // Browser globals (root is window)
     if (!root.PicticApi) {
       root.PicticApi = {};
     }
-    root.PicticApi.UserApi = factory(root.PicticApi.ApiClient, root.PicticApi.Error, root.PicticApi.User, root.PicticApi.UserCreate, root.PicticApi.UserLogin, root.PicticApi.UserToken);
+    root.PicticApi.UserApi = factory(root.PicticApi.ApiClient, root.PicticApi.Error, root.PicticApi.User, root.PicticApi.UserLogin, root.PicticApi.UserToken);
   }
-}(this, function(ApiClient, Error, User, UserCreate, UserLogin, UserToken) {
+}(this, function(ApiClient, Error, User, UserLogin, UserToken) {
   'use strict';
 
   /**
@@ -186,7 +186,7 @@
     /**
      * Create a new user
      * @param {Object} opts Optional parameters
-     * @param {module:model/UserCreate} opts.body User object
+     * @param {module:model/User} opts.body User object
      * @param {module:api/UserApi~usersPostCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/User}
      */

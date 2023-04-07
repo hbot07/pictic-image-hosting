@@ -87,7 +87,7 @@ def images_id_upvote_post(id):  # noqa: E501
     return 'do some magic!'
 
 
-def images_post(title, image, description=None):  # noqa: E501
+def images_post(title, image, created_by_user_id=None):  # noqa: E501
     """Upload a new image
 
      # noqa: E501
@@ -96,8 +96,8 @@ def images_post(title, image, description=None):  # noqa: E501
     :type title: str
     :param image: Image file to upload
     :type image: werkzeug.datastructures.FileStorage
-    :param description: Description of the image
-    :type description: str
+    :param created_by_user_id: user id, who is uploading
+    :type created_by_user_id: int
 
     :rtype: Image
     """

@@ -164,7 +164,7 @@ var PicticApi = require('pictic_api');
 var apiInstance = new PicticApi.UserApi();
 
 var opts = { 
-  'body': new PicticApi.UserCreate() // UserCreate | User object
+  'body': new PicticApi.User() // User | User object
 };
 
 var callback = function(error, data, response) {
@@ -181,7 +181,7 @@ apiInstance.usersPost(opts, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**UserCreate**](UserCreate.md)| User object | [optional] 
+ **body** | [**User**](User.md)| User object | [optional] 
 
 ### Return type
 

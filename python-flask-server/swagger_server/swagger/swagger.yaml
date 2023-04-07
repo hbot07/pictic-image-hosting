@@ -33,16 +33,16 @@ paths:
         description: "Title of the image"
         required: true
         type: "string"
-      - name: "description"
-        in: "formData"
-        description: "Description of the image"
-        required: false
-        type: "string"
       - name: "image"
         in: "formData"
         description: "Image file to upload"
         required: true
         type: "file"
+      - name: "created_by_user_id"
+        in: "formData"
+        description: "user id, who is uploading"
+        required: false
+        type: "integer"
       security:
       - ApiKeyAuth: []
       responses:
@@ -301,7 +301,7 @@ paths:
         description: "User object"
         required: false
         schema:
-          $ref: "#/definitions/UserCreate"
+          $ref: "#/definitions/User"
       responses:
         "200":
           description: "Successful response"
@@ -414,6 +414,9 @@ definitions:
         description: "List of comments on the image"
         items:
           $ref: "#/definitions/Comment"
+      ceated_by_user_id:
+        type: "integer"
+        description: "user who uploaded the image"
     example:
       comments:
       - id: 1
@@ -423,6 +426,7 @@ definitions:
         text: "text"
         username: "username"
       upvotes: 6
+      ceated_by_user_id: 5
       id: 0
       title: "title"
       url: "url"
@@ -496,7 +500,10 @@ definitions:
       created_at:
         type: "string"
         format: "date-time"
+      password:
+        type: "string"
     example:
+      password: "password"
       created_at: "2000-01-23T04:56:07.000+00:00"
       id: 0
       email: "email"

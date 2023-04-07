@@ -70,6 +70,8 @@
         obj.upvotes = ApiClient.convertToType(data['upvotes'], 'Number');
       if (data.hasOwnProperty('comments'))
         obj.comments = ApiClient.convertToType(data['comments'], [Comment]);
+      if (data.hasOwnProperty('ceated_by_user_id'))
+        obj.ceatedByUserId = ApiClient.convertToType(data['ceated_by_user_id'], 'Number');
     }
     return obj;
   }
@@ -109,6 +111,12 @@
    * @member {Array.<module:model/Comment>} comments
    */
   exports.prototype.comments = undefined;
+
+  /**
+   * user who uploaded the image
+   * @member {Number} ceatedByUserId
+   */
+  exports.prototype.ceatedByUserId = undefined;
 
 
   return exports;

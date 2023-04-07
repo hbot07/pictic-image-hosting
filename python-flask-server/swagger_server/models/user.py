@@ -15,7 +15,7 @@ class User(Model):
     Do not edit the class manually.
     """
 
-    def __init__(self, id: int=None, username: str=None, email: str=None, created_at: datetime=None):  # noqa: E501
+    def __init__(self, id: int=None, username: str=None, email: str=None, created_at: datetime=None, password: str=None):  # noqa: E501
         """User - a model defined in Swagger
 
         :param id: The id of this User.  # noqa: E501
@@ -26,25 +26,30 @@ class User(Model):
         :type email: str
         :param created_at: The created_at of this User.  # noqa: E501
         :type created_at: datetime
+        :param password: The password of this User.  # noqa: E501
+        :type password: str
         """
         self.swagger_types = {
             'id': int,
             'username': str,
             'email': str,
-            'created_at': datetime
+            'created_at': datetime,
+            'password': str
         }
 
         self.attribute_map = {
             'id': 'id',
             'username': 'username',
             'email': 'email',
-            'created_at': 'created_at'
+            'created_at': 'created_at',
+            'password': 'password'
         }
 
         self._id = id
         self._username = username
         self._email = email
         self._created_at = created_at
+        self._password = password
 
     @classmethod
     def from_dict(cls, dikt) -> 'User':
@@ -140,3 +145,24 @@ class User(Model):
         """
 
         self._created_at = created_at
+
+    @property
+    def password(self) -> str:
+        """Gets the password of this User.
+
+
+        :return: The password of this User.
+        :rtype: str
+        """
+        return self._password
+
+    @password.setter
+    def password(self, password: str):
+        """Sets the password of this User.
+
+
+        :param password: The password of this User.
+        :type password: str
+        """
+
+        self._password = password

@@ -7,5 +7,6 @@ Name | Type | Description | Notes
 **username** | **String** |  | [optional] 
 **email** | **String** |  | [optional] 
 **createdAt** | **Date** |  | [optional] 
+**password** | **String** |  | [optional] 
 
 

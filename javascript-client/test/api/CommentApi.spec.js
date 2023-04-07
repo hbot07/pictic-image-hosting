@@ -101,6 +101,8 @@
 
                       }
             }
+            expect(data.ceatedByUserId).to.be.a('number');
+            expect(data.ceatedByUserId).to.be(0);
 
             done();
           });

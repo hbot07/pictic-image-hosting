@@ -334,7 +334,7 @@ var title = "title_example"; // String | Title of the image
 var image = "/path/to/file.txt"; // File | Image file to upload
 
 var opts = { 
-  'description': "description_example" // String | Description of the image
+  'createdByUserId': 56 // Number | user id, who is uploading
 };
 
 var callback = function(error, data, response) {
@@ -353,7 +353,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **title** | **String**| Title of the image | 
  **image** | **File**| Image file to upload | 
- **description** | **String**| Description of the image | [optional] 
+ **createdByUserId** | **Number**| user id, who is uploading | [optional] 
 
 ### Return type
 

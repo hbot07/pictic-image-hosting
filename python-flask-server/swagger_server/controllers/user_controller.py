@@ -3,7 +3,6 @@ import six
 
 from swagger_server.models.error import Error  # noqa: E501
 from swagger_server.models.user import User  # noqa: E501
-from swagger_server.models.user_create import UserCreate  # noqa: E501
 from swagger_server.models.user_login import UserLogin  # noqa: E501
 from swagger_server.models.user_token import UserToken  # noqa: E501
 from swagger_server import util
@@ -59,5 +58,5 @@ def users_post(body=None):  # noqa: E501
     :rtype: User
     """
     if connexion.request.is_json:
-        body = UserCreate.from_dict(connexion.request.get_json())  # noqa: E501
+        body = User.from_dict(connexion.request.get_json())  # noqa: E501
     return 'do some magic!'

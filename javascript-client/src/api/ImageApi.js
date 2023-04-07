@@ -342,7 +342,7 @@
      * @param {String} title Title of the image
      * @param {File} image Image file to upload
      * @param {Object} opts Optional parameters
-     * @param {String} opts.description Description of the image
+     * @param {Number} opts.createdByUserId user id, who is uploading
      * @param {module:api/ImageApi~imagesPostCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/Image}
      */
@@ -371,8 +371,8 @@
       };
       var formParams = {
         'title': title,
-        'description': opts['description'],
-        'image': image
+        'image': image,
+        'created_by_user_id': opts['createdByUserId']
       };
 
       var authNames = ['ApiKeyAuth'];
